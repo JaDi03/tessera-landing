@@ -278,6 +278,17 @@ section { padding: 100px 0; }
     align-items: center;
     gap: 6px;
 }
+.status-badge.soon {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
 .pulse-dot {
     display: inline-block;
     width: 7px;
@@ -346,6 +357,18 @@ section { padding: 100px 0; }
 .launch-btn:hover {
     box-shadow: 0 8px 24px rgba(255, 208, 0, 0.35);
     transform: translateY(-1px);
+}
+.launch-btn.disabled {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+.launch-btn.disabled:hover {
+    transform: none;
+    box-shadow: none;
 }
 
 /* Upcoming Connectors Roadmap (Deleted) */
