@@ -3,167 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tessera — Monetize Any Self-Hosted Platform</title>
-    <meta name="description" content="Tessera is a drop-in payment proxy that adds nanopayments to any self-hosted platform. Powered by Circle Gateway and the x402 protocol on Arc Testnet.">
+    <title>Tessera — USDC support engine for self-hosted platforms</title>
+    <meta name="description" content="Optional USDC support for self-hosted platforms. Tips on free content, per-second billing on exclusives. Viewers stay on your app. Arc Testnet MVP powered by Circle Gateway.">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="glow-bg"></div>
     <div class="glow-bg glow-bg-2"></div>
 
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-content">
             <div class="logo">
                 <img src="logo_yellow.svg" alt="Tessera Logo" height="26">
             </div>
             <div class="nav-links">
+                <a href="#billing">Billing</a>
+                <a href="#demo">Demo</a>
                 <a href="#how-it-works">How it works</a>
-                <a href="#why-arc">Why Arc</a>
-                <a href="#gateways">Live Showcases</a>
                 <a href="https://jadi03.github.io/tessera/">Docs</a>
-                <a href="https://github.com/JaDi03/tessera" target="_blank" class="nav-btn">GitHub →</a>
+                <a href="https://github.com/JaDi03/tessera" target="_blank" rel="noopener" class="nav-btn">GitHub</a>
             </div>
         </div>
     </nav>
 
     <main>
-        <!-- Hero Section -->
         <section class="hero hidden">
-            <div class="hero-badge">Built on Arc Testnet · Powered by Circle Gateway</div>
+            <div class="hero-badge">Arc Testnet MVP · Circle Gateway</div>
             <h1 class="hero-title">
-                Add nanopayments to any<br>
-                <span class="gradient-text">self-hosted platform.</span>
+                Optional USDC support for<br>
+                <span class="gradient-text">any self-hosted platform.</span>
             </h1>
             <p class="hero-subtitle">
-                Tessera is a drop-in monetization layer for self-hosted streaming and publishing servers.
-                Point it at your service, and your users pay in USDC per second of viewing, reading, or interacting. 
-                Zero platform modifications required.
+                Tessera is a support engine. Your audience tips or pays per second while they stay on your app.
+                Creators and instance admins receive testnet USDC. Free content stays free.
             </p>
             <div class="hero-actions">
-                <a href="#gateways" class="btn btn-primary">Try Live Showcases</a>
-                <a href="https://jadi03.github.io/tessera/" target="_blank" class="btn btn-secondary">Read the Docs</a>
+                <a href="#demo" class="btn btn-primary">Try the live demo</a>
+                <a href="https://jadi03.github.io/tessera/" target="_blank" rel="noopener" class="btn btn-secondary">Read the docs</a>
             </div>
         </section>
 
-        <!-- Live Gateways Showcase Section -->
-        <section id="gateways" class="gateways-section">
-            <h2 class="section-title hidden">Live Showcases</h2>
-            <p class="section-subtitle hidden">Experience real, production-ready integrations. Fund your session wallet with test USDC, watch, and pay strictly for the seconds you stream.</p>
+        <section id="billing" class="billing-section">
+            <h2 class="section-title hidden">Two ways to support</h2>
+            <p class="section-subtitle hidden">Pick the model that fits each piece of content. No full-course purchase. No forced subscription.</p>
 
-            <div class="gateways-grid">
-                <!-- PeerTube Featured Card -->
+            <div class="billing-grid">
+                <article class="billing-card hidden">
+                    <img src="assets/support-tip.png" alt="Optional tip on free content" class="billing-image">
+                    <h3>Tips on free content</h3>
+                    <p>The resource stays open. Viewers see an optional USDC tip button when they want to support the creator.</p>
+                </article>
+                <article class="billing-card hidden" style="transition-delay: 120ms;">
+                    <img src="assets/support-time.png" alt="Per-second support on exclusive content" class="billing-image">
+                    <h3>Per-second on exclusives</h3>
+                    <p>Tutorials, courses, premieres: billing runs while they watch and stops when they leave. Ten minutes watched means ten minutes of support.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="who" class="who-section">
+            <h2 class="section-title hidden">Who benefits</h2>
+            <div class="who-grid">
+                <div class="feature-card hidden">
+                    <div class="feature-icon">V</div>
+                    <h3>Viewers</h3>
+                    <p>Optional tips on free content. On exclusives, pay only for the seconds they actually consume. Leave anytime.</p>
+                </div>
+                <div class="feature-card hidden" style="transition-delay: 80ms;">
+                    <div class="feature-icon">C</div>
+                    <h3>Creators</h3>
+                    <p>Direct audience support in USDC: tips or time-based billing on premium resources.</p>
+                </div>
+                <div class="feature-card hidden" style="transition-delay: 160ms;">
+                    <div class="feature-icon">A</div>
+                    <h3>Instance admins</h3>
+                    <p>Configurable share on time-based content (default about 10%) to help cover hosting.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="gateways-section">
+            <h2 class="section-title hidden">Live demo</h2>
+            <p class="section-subtitle hidden">Try Tessera on our PeerTube instance. Sign in with email or Google, fund with test USDC, then watch an exclusive or tip a free video.</p>
+
+            <div class="demo-layout">
                 <div class="gateway-card featured hidden">
                     <div class="card-glow"></div>
                     <div class="gateway-header">
-                        <span class="platform-badge">PeerTube integration</span>
-                        <span class="status-badge live"><span class="pulse-dot"></span> Live Demo</span>
+                        <span class="platform-badge">PeerTube connector live</span>
+                        <span class="status-badge live"><span class="pulse-dot"></span> Live</span>
                     </div>
                     <div class="gateway-body">
-                        <h3>Federated Video-on-Demand</h3>
+                        <h3>Federated video</h3>
                         <p>
-                            Watch premium videos directly on our live PeerTube instance. Tessera gates player access:
-                            sign in with a secure PIN, fund your wallet, and watch. Billing runs per-second and stops the instant you close the window.
+                            Open a premium video to see the paywall and per-second billing. Open a free video for the tip button.
+                            Sign in with Circle (email OTP or Google), fund your wallet from the faucet or bridge, and support creators without leaving PeerTube.
                         </p>
                         <ul class="spec-list">
-                            <li>Off-chain EIP-3009 authorization signatures</li>
-                            <li>Automated refunds upon exit / cash-out</li>
-                            <li>Circle Web SDK non-custodial wallet onboarding</li>
+                            <li>Non-custodial Circle wallet in the browser</li>
+                            <li>Off-chain Gateway billing while you watch</li>
+                            <li>Unused balance stays in your session or cash out</li>
                         </ul>
                     </div>
                     <div class="gateway-footer">
-                        <a href="https://peertube.try-tessera.xyz/" target="_blank" class="launch-btn">Launch PeerTube Demo →</a>
+                        <a href="https://peertube.try-tessera.xyz/" target="_blank" rel="noopener" class="launch-btn">Launch PeerTube demo</a>
                     </div>
                 </div>
 
-                <!-- Owncast Featured Card -->
-                <div class="gateway-card featured hidden" style="transition-delay: 150ms;">
-                    <div class="card-glow cg-owncast"></div>
-                    <div class="gateway-header">
-                        <span class="platform-badge">Owncast integration</span>
-                        <span class="status-badge soon">Soon</span>
-                    </div>
-                    <div class="gateway-body">
-                        <h3>Pay-Per-Second Live Streaming</h3>
-                        <p>
-                            Support live streams in real-time. Tessera injects an interactive paywall directly in front of the server's video element, integrating seamlessly with chat and active streaming events.
-                        </p>
-                        <ul class="spec-list">
-                            <li>Instant balance updates on dashboard widgets</li>
-                            <li>Zero chat disruption during streaming session</li>
-                            <li>Native settlement on Arc L1 blockchain</li>
-                        </ul>
-                    </div>
-                    <div class="gateway-footer">
-                        <a class="launch-btn disabled">Soon</a>
-                    </div>
+                <div class="surfaces-panel hidden" style="transition-delay: 100ms;">
+                    <h3>Connectable surfaces</h3>
+                    <p class="surfaces-lead">Tessera is a sidecar. Any platform that can read play, stop, or tip events can integrate via a connector.</p>
+                    <ul class="surfaces-list">
+                        <li><strong>Video / live</strong> — PeerTube (live), Jellyfin, Owncast</li>
+                        <li><strong>Audio / podcast</strong> — Navidrome, Funkwhale, Castopod</li>
+                        <li><strong>Photos</strong> — Immich, PhotoPrism</li>
+                        <li><strong>Posts</strong> — Ghost, WriteFreely</li>
+                    </ul>
+                    <a href="https://github.com/JaDi03/peertube-plugin-tessera" target="_blank" rel="noopener" class="surfaces-link">View PeerTube plugin</a>
                 </div>
             </div>
         </section>
 
-        <!-- How it works -->
         <section id="how-it-works" class="magic">
-            <h2 class="section-title hidden">How it works</h2>
-            <p class="section-subtitle hidden">Tessera operates as a lightweight sidecar proxy, intercepting and validating micropayments before assets are loaded.</p>
-            
-            <!-- Injected responsive diagram container -->
-            <div class="diagram-container hidden">
-                <img src="diagram_landing.svg" alt="Tessera Sequence Diagram" class="diagram-img">
-            </div>
-
+            <h2 class="section-title hidden">How it works for viewers</h2>
+            <p class="section-subtitle hidden">Three simple steps for viewers. Under the hood, Tessera coordinates USDC stream or tip payments through Circle Gateway.</p>
             <div class="features-grid">
                 <div class="feature-card hidden">
                     <div class="feature-icon">1</div>
-                    <h3>Viewer funds a session</h3>
-                    <p>The viewer deposits a small amount of USDC into their non-custodial Circle Wallet. This is the only on-chain transaction. Everything after this is off-chain.</p>
+                    <h3>Sign in and fund</h3>
+                    <p>Create a Circle wallet with email or Google. Add test USDC via faucet or bridge from another testnet chain.</p>
                 </div>
                 <div class="feature-card hidden" style="transition-delay: 100ms;">
                     <div class="feature-icon">2</div>
-                    <h3>Tessera intercepts the request</h3>
-                    <p>The proxy sits in front of your server. When a viewer tries to access content, Tessera requires an x402 payment header before the HTML or media is served.</p>
+                    <h3>Enjoy the content</h3>
+                    <p>Tip on free videos with one click. On exclusives, the paywall unlocks playback and billing runs per second while you watch.</p>
                 </div>
                 <div class="feature-card hidden" style="transition-delay: 200ms;">
                     <div class="feature-icon">3</div>
-                    <h3>Circle Gateway settles in USDC</h3>
-                    <p>The Gateway verifies the EIP-3009 authorization signature off-chain, confirms the balance, and grants instant access. Thousands of these micro-authorizations are later batched and settled on Arc Testnet in a single transaction.</p>
+                    <h3>Leave anytime</h3>
+                    <p>Billing stops when you close the player or pause. Unused USDC stays in your session for next time, or withdraw to your wallet.</p>
+                </div>
+            </div>
+            <figure class="diagram-figure hidden">
+                <div class="diagram-container">
+                    <img src="assets/diagram_landing.svg" alt="Sequence: viewer requests content, platform intercepts via Tessera, Circle Gateway authorizes USDC, creator receives payout" class="diagram-img">
+                </div>
+                <figcaption>When a viewer requests paid content, your platform routes the request through Tessera. The viewer authorizes USDC (stream or tip), Tessera settles with Circle Gateway, and the creator receives the payout.</figcaption>
+            </figure>
+        </section>
+
+        <section id="why-arc" class="why-arc">
+            <div class="why-arc-inner">
+                <h2 class="section-title hidden">Why Arc Testnet</h2>
+                <div class="why-arc-content hidden">
+                    <p>
+                        On traditional rails, a small tip dies in fees. On <strong>Arc Testnet</strong>, gas is USDC and network costs are cents, not dollars.
+                    </p>
+                    <p>
+                        Circle Gateway keeps support <strong>off-chain</strong> while people consume: each tick is an authorization, not a blockchain transaction.
+                        Settlement batches on Arc when needed.
+                    </p>
+                    <p>
+                        Viewers can fund from other testnets using <strong>CCTP</strong>. Tessera's bridge UI handles the path to Arc so you are not stuck wiring wallets manually.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Why Arc -->
-        <section id="why-arc" class="why-arc">
-            <div class="why-arc-inner">
-                <h2 class="section-title hidden">Why this runs on Arc</h2>
-                <div class="why-arc-content hidden">
-                    <p>
-                        On a traditional blockchain, charging $0.0001 per second of video is economically broken.
-                        A single Ethereum gas fee can cost more than the entire payment itself.
-                    </p>
-                    <p>
-                        Arc is a Layer-1 blockchain built by Circle where <strong>USDC is the native gas token</strong>.
-                        Fees are predictable, dollar-denominated, and designed for high-frequency financial activity.
-                        This makes it the natural settlement layer for the Circle Gateway.
-                    </p>
-                    <p>
-                        The Circle Gateway takes advantage of this by keeping most activity
-                        <strong>off-chain</strong>: each payment is an EIP-3009 signature, not a blockchain
-                        transaction. Only the periodic batch settlement hits the chain. This means a viewer
-                        can stream for an hour and generate hundreds of micro-authorizations, but produce
-                        only a handful of on-chain transactions.
-                    </p>
-                    <p>
-                        Users who already hold USDC on Ethereum, Base, or other supported chains can
-                        bridge in using <strong>CCTP (Cross-Chain Transfer Protocol)</strong>.
-                        Tessera leverages Circle's <strong>Forwarding Service</strong> to automate CCTP finalization on Arc,
-                        meaning the viewer never has to manage or pay gas for the bridge transaction manually.
-                    </p>
+        <section id="developers" class="dev-strip hidden">
+            <div class="dev-strip-inner">
+                <h2>Building a connector?</h2>
+                <p>Tessera speaks HTTP: <code>start</code>, <code>stop</code>, and <code>tips</code>. Ship a plugin or webhook on your platform; no fork required.</p>
+                <div class="dev-strip-links">
+                    <a href="https://jadi03.github.io/tessera/" target="_blank" rel="noopener" class="btn btn-secondary">Documentation</a>
+                    <a href="https://github.com/JaDi03/tessera/blob/main/CONNECTOR_SPEC.md" target="_blank" rel="noopener" class="btn btn-secondary">Connector spec</a>
+                    <a href="https://github.com/JaDi03/tessera" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
                 </div>
             </div>
         </section>
@@ -175,9 +194,10 @@
                 <img src="logo_yellow.svg" alt="Tessera Logo" height="24">
             </div>
             <div class="footer-links">
-                <a href="https://github.com/JaDi03/tessera" target="_blank">GitHub</a>
-                <a href="https://docs.arc.network" target="_blank">Arc Docs</a>
-                <a href="https://developers.circle.com/gateway" target="_blank">Circle Gateway</a>
+                <a href="https://peertube.try-tessera.xyz/" target="_blank" rel="noopener">Live demo</a>
+                <a href="https://jadi03.github.io/tessera/" target="_blank" rel="noopener">Docs</a>
+                <a href="https://github.com/JaDi03/tessera" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://github.com/JaDi03/peertube-plugin-tessera" target="_blank" rel="noopener">PeerTube plugin</a>
             </div>
         </div>
     </footer>
