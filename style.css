@@ -209,15 +209,114 @@ section { padding: 100px 0; }
     justify-content: center;
 }
 
-/* ── Gateways Section ─────────────────────────────── */
+/* ── Billing modes ─────────────────────────────────── */
+.billing-section {
+    padding: 80px 0 40px;
+}
+.billing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+.billing-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 24px;
+    backdrop-filter: blur(20px);
+    transition: border-color 0.25s ease;
+}
+.billing-card:hover {
+    border-color: var(--border-hover);
+}
+.billing-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: block;
+}
+.billing-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.billing-card p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+/* ── Who benefits ──────────────────────────────────── */
+.who-section {
+    padding: 60px 0;
+}
+.who-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* ── Gateways / Demo ─────────────────────────────── */
 .gateways-section {
     padding: 60px 0;
+}
+.demo-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 28px;
+    align-items: stretch;
 }
 .gateways-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 32px;
     margin-bottom: 64px;
+}
+.surfaces-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 32px;
+    backdrop-filter: blur(20px);
+}
+.surfaces-panel h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.surfaces-lead {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+.surfaces-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+.surfaces-list li {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+    padding-left: 14px;
+    border-left: 2px solid rgba(255, 208, 0, 0.35);
+}
+.surfaces-list strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+.surfaces-link {
+    color: var(--accent-1);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+.surfaces-link:hover {
+    text-decoration: underline;
 }
 .gateway-card {
     background: var(--bg-card);
@@ -395,6 +494,78 @@ section { padding: 100px 0; }
     line-height: 1.7;
 }
 
+/* ── Diagram (How it works) ──────────────────────── */
+.diagram-figure {
+    margin-top: 56px;
+    text-align: center;
+}
+.diagram-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.diagram-container:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 195, 0, 0.25);
+    box-shadow: 0 12px 40px 0 rgba(255, 195, 0, 0.08);
+}
+.diagram-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+.diagram-figure figcaption {
+    margin-top: 16px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Developer strip ───────────────────────────────── */
+.dev-strip {
+    padding: 0 0 80px;
+}
+.dev-strip-inner {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 40px 32px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+}
+.dev-strip-inner h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.dev-strip-inner p {
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.65;
+    max-width: 560px;
+    margin: 0 auto 24px;
+}
+.dev-strip-inner code {
+    color: var(--accent-1);
+    font-size: 0.95em;
+}
+.dev-strip-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /* ── Why Arc ───────────────────────────────────────── */
 .why-arc { background: none; }
 .why-arc-inner {
@@ -459,8 +630,12 @@ footer {
 @media (max-width: 768px) {
     .hero-actions { flex-direction: column; width: 100%; max-width: 320px; }
     .nav-links { gap: 16px; }
-    .nav-links a:not(.nav-btn) { display: none; }
+    .nav-links a:not(.nav-btn):not([href="#demo"]) { display: none; }
     .footer-content { flex-direction: column; text-align: center; }
     .why-arc .section-title { text-align: center; }
     .gateways-grid { grid-template-columns: 1fr; }
+    .billing-grid { grid-template-columns: 1fr; }
+    .who-grid { grid-template-columns: 1fr; }
+    .demo-layout { grid-template-columns: 1fr; }
+    .gateway-card { min-height: auto; }
 }
