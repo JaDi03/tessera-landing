@@ -88,30 +88,55 @@
         </section>
 
         <section id="demo" class="gateways-section">
-            <h2 class="section-title hidden">Live demo</h2>
-            <p class="section-subtitle hidden">Try Tessera on our PeerTube instance. Sign in with email or Google, fund with test USDC, then watch an exclusive or tip a free video.</p>
+            <h2 class="section-title hidden">Live demos</h2>
+            <p class="section-subtitle hidden">Try Tessera on PeerTube or Piwigo. Sign in with email OTP, fund with test USDC, then tip or watch an exclusive.</p>
 
             <div class="demo-layout">
-                <div class="gateway-card featured hidden">
-                    <div class="card-glow"></div>
-                    <div class="gateway-header">
-                        <span class="platform-badge">PeerTube connector live</span>
-                        <span class="status-badge live"><span class="pulse-dot"></span> Live</span>
+                <div class="gateways-grid">
+                    <div class="gateway-card featured hidden">
+                        <div class="card-glow"></div>
+                        <div class="gateway-header">
+                            <span class="platform-badge">PeerTube connector live</span>
+                            <span class="status-badge live"><span class="pulse-dot"></span> Live</span>
+                        </div>
+                        <div class="gateway-body">
+                            <h3>Self-hosted video</h3>
+                            <p>
+                                Open a premium video to see the paywall and per-second billing. Open a free video for the tip button.
+                                Sign in with Circle (email OTP), fund your wallet from the faucet or bridge, and support creators without leaving PeerTube.
+                            </p>
+                            <ul class="spec-list">
+                                <li>Non-custodial Circle wallet in the browser</li>
+                                <li>Off-chain Gateway billing while you watch</li>
+                                <li>Unused balance stays in your session or cash out</li>
+                            </ul>
+                        </div>
+                        <div class="gateway-footer">
+                            <a href="https://peertube.try-tessera.xyz/" target="_blank" rel="noopener" class="launch-btn">Launch PeerTube demo</a>
+                        </div>
                     </div>
-                    <div class="gateway-body">
-                        <h3>Federated video</h3>
-                        <p>
-                            Open a premium video to see the paywall and per-second billing. Open a free video for the tip button.
-                            Sign in with Circle (email OTP or Google), fund your wallet from the faucet or bridge, and support creators without leaving PeerTube.
-                        </p>
-                        <ul class="spec-list">
-                            <li>Non-custodial Circle wallet in the browser</li>
-                            <li>Off-chain Gateway billing while you watch</li>
-                            <li>Unused balance stays in your session or cash out</li>
-                        </ul>
-                    </div>
-                    <div class="gateway-footer">
-                        <a href="https://peertube.try-tessera.xyz/" target="_blank" rel="noopener" class="launch-btn">Launch PeerTube demo</a>
+
+                    <div class="gateway-card featured hidden" style="transition-delay: 80ms;">
+                        <div class="card-glow"></div>
+                        <div class="gateway-header">
+                            <span class="platform-badge">Piwigo connector live</span>
+                            <span class="status-badge live"><span class="pulse-dot"></span> Live</span>
+                        </div>
+                        <div class="gateway-body">
+                            <h3>Self-hosted photos</h3>
+                            <p>
+                                Open any photo for an optional USDC tip. The gallery stays free; the tip is only if you want to support the photographer.
+                                Sign in with Circle (email OTP), fund your wallet, and tip without leaving Piwigo.
+                            </p>
+                            <ul class="spec-list">
+                                <li>Non-custodial Circle wallet in the browser</li>
+                                <li>Optional tips on public photos</li>
+                                <li>Unused balance stays in your session or cash out</li>
+                            </ul>
+                        </div>
+                        <div class="gateway-footer">
+                            <a href="https://piwigo.try-tessera.xyz/" target="_blank" rel="noopener" class="launch-btn">Launch Piwigo demo</a>
+                        </div>
                     </div>
                 </div>
 
@@ -119,12 +144,15 @@
                     <h3>Connectable surfaces</h3>
                     <p class="surfaces-lead">Tessera is a sidecar. Any platform that can read play, stop, or tip events can integrate via a connector.</p>
                     <ul class="surfaces-list">
-                        <li><strong>Video / live</strong> — PeerTube (live), Jellyfin, Owncast</li>
-                        <li><strong>Audio / podcast</strong> — Navidrome, Funkwhale, Castopod</li>
-                        <li><strong>Photos</strong> — Immich, PhotoPrism</li>
-                        <li><strong>Posts</strong> — Ghost, WriteFreely</li>
+                        <li><strong>Video / live</strong> - PeerTube (live), Jellyfin, Owncast</li>
+                        <li><strong>Audio / podcast</strong> - Navidrome, Funkwhale, Castopod</li>
+                        <li><strong>Photos</strong> - Piwigo (live), Immich, PhotoPrism</li>
+                        <li><strong>Posts</strong> - Ghost, WriteFreely</li>
                     </ul>
-                    <a href="https://github.com/JaDi03/peertube-plugin-tessera" target="_blank" rel="noopener" class="surfaces-link">View PeerTube plugin</a>
+                    <div class="surfaces-links">
+                        <a href="https://github.com/JaDi03/peertube-plugin-tessera" target="_blank" rel="noopener" class="surfaces-link">View PeerTube plugin</a>
+                        <a href="https://github.com/JaDi03/piwigo-plugin-tessera" target="_blank" rel="noopener" class="surfaces-link">View Piwigo plugin</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -136,7 +164,7 @@
                 <div class="feature-card hidden">
                     <div class="feature-icon">1</div>
                     <h3>Sign in and fund</h3>
-                    <p>Create a Circle wallet with email or Google. Add test USDC via faucet or bridge from another testnet chain.</p>
+                    <p>Create a Circle wallet with email OTP. Add test USDC via faucet or bridge from another testnet chain.</p>
                 </div>
                 <div class="feature-card hidden" style="transition-delay: 100ms;">
                     <div class="feature-icon">2</div>
@@ -194,10 +222,12 @@
                 <img src="logo_yellow.svg" alt="Tessera Logo" height="24">
             </div>
             <div class="footer-links">
-                <a href="https://peertube.try-tessera.xyz/" target="_blank" rel="noopener">Live demo</a>
+                <a href="https://peertube.try-tessera.xyz/" target="_blank" rel="noopener">PeerTube demo</a>
+                <a href="https://piwigo.try-tessera.xyz/" target="_blank" rel="noopener">Piwigo demo</a>
                 <a href="https://jadi03.github.io/tessera/" target="_blank" rel="noopener">Docs</a>
                 <a href="https://github.com/JaDi03/tessera" target="_blank" rel="noopener">GitHub</a>
                 <a href="https://github.com/JaDi03/peertube-plugin-tessera" target="_blank" rel="noopener">PeerTube plugin</a>
+                <a href="https://github.com/JaDi03/piwigo-plugin-tessera" target="_blank" rel="noopener">Piwigo plugin</a>
             </div>
         </div>
     </footer>
