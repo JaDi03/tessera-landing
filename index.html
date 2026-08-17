@@ -89,7 +89,7 @@
 
         <section id="demo" class="gateways-section">
             <h2 class="section-title hidden">Live demos</h2>
-            <p class="section-subtitle hidden">Try Tessera on PeerTube or Piwigo. Sign in with email OTP, fund with test USDC, then tip or watch an exclusive.</p>
+            <p class="section-subtitle hidden">Try Tessera on PeerTube, Jellyfin, or Piwigo. Sign in with email OTP, fund with test USDC, then tip or watch an exclusive.</p>
 
             <div class="demo-layout">
                 <div class="gateways-grid">
@@ -113,6 +113,29 @@
                         </div>
                         <div class="gateway-footer">
                             <a href="https://peertube.try-tessera.xyz/" target="_blank" rel="noopener" class="launch-btn">Launch PeerTube demo</a>
+                        </div>
+                    </div>
+
+                    <div class="gateway-card featured hidden" style="transition-delay: 40ms;">
+                        <div class="card-glow"></div>
+                        <div class="gateway-header">
+                            <span class="platform-badge">Jellyfin connector live</span>
+                            <span class="status-badge live"><span class="pulse-dot"></span> Live</span>
+                        </div>
+                        <div class="gateway-body">
+                            <h3>Self-hosted media</h3>
+                            <p>
+                                Open an exclusive item for the paywall and per-second billing. Open a free item for the tip button.
+                                Sign in with Circle (email OTP), fund your wallet from the faucet or bridge, and support creators without leaving Jellyfin.
+                            </p>
+                            <ul class="spec-list">
+                                <li>Non-custodial Circle wallet in the browser</li>
+                                <li>Off-chain Gateway billing while you watch</li>
+                                <li>Unused balance stays in your session or cash out</li>
+                            </ul>
+                        </div>
+                        <div class="gateway-footer">
+                            <a href="https://jellyfin.try-tessera.xyz/" target="_blank" rel="noopener" class="launch-btn">Launch Jellyfin demo</a>
                         </div>
                     </div>
 
@@ -141,17 +164,17 @@
                 </div>
 
                 <div class="surfaces-panel hidden" style="transition-delay: 100ms;">
-                    <h3>Connectable surfaces</h3>
-                    <p class="surfaces-lead">Tessera is a sidecar. Any platform that can read play, stop, or tip events can integrate via a connector.</p>
+                    <h3>Live plugins</h3>
+                    <p class="surfaces-lead">Install Tessera, then the plugin for your platform. Settings live in each repo.</p>
                     <ul class="surfaces-list">
-                        <li><strong>Video / live</strong> - PeerTube (live), Jellyfin, Owncast</li>
-                        <li><strong>Audio / podcast</strong> - Navidrome, Funkwhale, Castopod</li>
-                        <li><strong>Photos</strong> - Piwigo (live), Immich, PhotoPrism</li>
-                        <li><strong>Posts</strong> - Ghost, WriteFreely</li>
+                        <li><strong>PeerTube</strong> - Per-second on exclusives, tips on free videos</li>
+                        <li><strong>Jellyfin</strong> - Per-second on exclusives, tips on free items</li>
+                        <li><strong>Piwigo</strong> - Tips on public photos</li>
                     </ul>
                     <div class="surfaces-links">
-                        <a href="https://github.com/JaDi03/peertube-plugin-tessera" target="_blank" rel="noopener" class="surfaces-link">View PeerTube plugin</a>
-                        <a href="https://github.com/JaDi03/piwigo-plugin-tessera" target="_blank" rel="noopener" class="surfaces-link">View Piwigo plugin</a>
+                        <a href="https://github.com/JaDi03/peertube-plugin-tessera" target="_blank" rel="noopener" class="surfaces-link">PeerTube plugin</a>
+                        <a href="https://github.com/JaDi03/jellyfin-plugin-tessera" target="_blank" rel="noopener" class="surfaces-link">Jellyfin plugin</a>
+                        <a href="https://github.com/JaDi03/piwigo-plugin-tessera" target="_blank" rel="noopener" class="surfaces-link">Piwigo plugin</a>
                     </div>
                 </div>
             </div>
@@ -223,10 +246,12 @@
             </div>
             <div class="footer-links">
                 <a href="https://peertube.try-tessera.xyz/" target="_blank" rel="noopener">PeerTube demo</a>
+                <a href="https://jellyfin.try-tessera.xyz/" target="_blank" rel="noopener">Jellyfin demo</a>
                 <a href="https://piwigo.try-tessera.xyz/" target="_blank" rel="noopener">Piwigo demo</a>
                 <a href="https://jadi03.github.io/tessera/" target="_blank" rel="noopener">Docs</a>
                 <a href="https://github.com/JaDi03/tessera" target="_blank" rel="noopener">GitHub</a>
                 <a href="https://github.com/JaDi03/peertube-plugin-tessera" target="_blank" rel="noopener">PeerTube plugin</a>
+                <a href="https://github.com/JaDi03/jellyfin-plugin-tessera" target="_blank" rel="noopener">Jellyfin plugin</a>
                 <a href="https://github.com/JaDi03/piwigo-plugin-tessera" target="_blank" rel="noopener">Piwigo plugin</a>
             </div>
         </div>
